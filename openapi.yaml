@@ -1,0 +1,24 @@
+
+openapi: 3.1.0
+info:
+  title: Document Content API
+  description: API to serve content of a Word document.
+  version: 1.0.0
+servers:
+  - url: http://localhost:5000
+    description: Local server
+paths:
+  /get_document_content:
+    get:
+      operationId: getDocumentContent
+      summary: Retrieves the content of the Word document.
+      responses:
+        '200':
+          description: Content of the Word document
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  content:
+                    type: string
